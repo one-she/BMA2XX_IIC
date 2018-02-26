@@ -126,7 +126,7 @@ void test_dbg_print(char * fm, ...){}
 #endif
 
 /***************************************************/
-/*			software I2C APIs for motion sensor    */
+/*      software I2C APIs for motion sensor    */
 /***************************************************/
 
 /******************************************
@@ -319,7 +319,7 @@ void ms_Restart(void)
 }
 
 /***************************************************/
-/*			motion sensor read and write APIs 	   */
+/*	motion sensor read and write APIs 	   */
 /***************************************************/
 /******************************************
 	BMA2XX ms delay function  
@@ -533,7 +533,7 @@ kal_bool BMA2XX_WriteBytes_Mul(kal_uint8 RegAddr, kal_uint8 *Data, kal_uint16 Le
  * Description: *//**\brief This API Reads tap slope status register byte
  *                          from location 0Bh
  *
- *					   该API从位置0Bh读取抽头斜率状态寄存器字节
+ *					   璇PI浠庝綅缃�0Bh璇诲彇鎶藉ご鏂滅巼鐘舵�佸瘎瀛樺櫒瀛楄妭
  *  \param unsigned char * status_tap : Address of status_tap register
  ******************************************************************************/
 int BMA2XX_get_int_tap_status(unsigned char * status_tap)
@@ -549,7 +549,7 @@ int BMA2XX_get_int_tap_status(unsigned char * status_tap)
  * Description: *//**\brief This API Reads orient status register byte
  *                          from location 0Ch
  *
- *					  该API从位置0Ch读取定位状态寄存器字节
+ *					  璇PI浠庝綅缃�0Ch璇诲彇瀹氫綅鐘舵�佸瘎瀛樺櫒瀛楄妭
  *  \param unsigned char *status_orient : Address of status_orient register
  ******************************************************************************/
 int BMA2XX_get_int_orient_status(unsigned char *status_orient)
@@ -565,7 +565,7 @@ int BMA2XX_get_int_orient_status(unsigned char *status_orient)
  * Description: *//**\brief This API Reads interrupt status register byte
  *                          from location 09h
  *
- *					该API从位置09h读取中断状态寄存器字节
+ *					璇PI浠庝綅缃�09h璇诲彇涓柇鐘舵�佸瘎瀛樺櫒瀛楄妭
  ******************************************************************************/
 int BMA2XX_get_interrupt_status(unsigned char * status)
 {
@@ -579,7 +579,7 @@ int BMA2XX_get_interrupt_status(unsigned char * status)
 /**************************************************************************************
  * Description: *//**\brief This API is used to get the Ranges(g values) of the sensor
  *
- *					该API用于获取传感器的范围（g值）0x0f
+ *		    该API用于获取传感器的范围（g值）0x0f
  *  \param unsigned char * Range : Address of Range
  *                        3 -> 2G
  *                        5 -> 4G
@@ -607,7 +607,7 @@ kal_bool BMA2XX_Get_Range(kal_uint8* BMA2XXRange)
 /***********************************************************************************
  * Description: *//**\brief This API is used to set Ranges(g value) of the sensor
  *
- *				    该API用于设置传感器的范围（g值）0x0f
+ *		       该API用于设置传感器的范围（g值）0x0f
  *  \param unsigned char Range
  *                        3 -> 2G
  *                        5 -> 4G
@@ -639,7 +639,7 @@ kal_bool BMA2XX_Set_Range(kal_uint8 BMA2XXRange)
 /***********************************************************************************
  * Description: *//**\brief This API is used to get the bandwidth of the sensor
  *
-  *                        该API用于获取传感器的带宽 0x10
+  *                        该API用于获取传感器的带宽0x10
  *  \param  unsigned char * BW : Address of * BW
  *                       8 -> 7.81HZ
  *                       9 -> 15.63HZ
@@ -666,7 +666,7 @@ int BMA2XX_get_bandwidth(unsigned char * BW)
 /*******************************************************************************
  * Description: *//**\brief This API is used to set Bandwidth of the sensor
  *
- *						  该API用于设置传感器的带宽0x10
+ *			  该API用于设置传感器的带宽0x10
  *  \param unsigned char BW
  *                       8 -> 7.81HZ
  *                       9 -> 15.63HZ
@@ -742,7 +742,7 @@ int BMA2XX_set_bandwidth(unsigned char BW)
 /***************************************************************************************
  * Description: *//**\brief This API is used to get the operating modes of the sensor
  *
- *							��API���ڻ�ȡ�������Ĳ���ģʽ0x11
+ *				该API用于获取传感器的操作模式0x11
  *  \param unsigned char * Mode : Address of Mode
  *                       0 -> NORMAL
  *                       1 -> LOWPOWER1
@@ -813,7 +813,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_mode(unsigned char * Mode )
 /***************************************************************************************
  * Description: *//**\brief This API is used to set the operating Modes of the sensor
  *
- *					            ��API�������ô������Ĺ���ģʽ0x11
+ *			 该API用于设置传感器的工作模式0x11
  *  \param unsigned char Mode
  *                       0 -> NORMAL
  *                       1 -> LOWPOWER1
@@ -888,7 +888,7 @@ unsigned char BMA2XX_set_mode(unsigned char Mode)
 /********************************************************************************************
  * Description: *//**\brief This API is used to get the sleep duration status of the sensor
  *
- *						该API用于获取传感器的睡眠持续时间状态0x11
+ *				该API用于获取传感器的睡眠持续时间状态0x11
  *  \param  unsigned char *sleep_dur : Address of sleep_dur
  *                       5 -> 0.5MS
  *                       6 -> 1MS
@@ -917,7 +917,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_sleep_dur(unsigned char *sleep_dur)
 /************************************************************************************
  * Description: *//**\brief This API is used to set Sleep Duration of the sensor
  *
- *							该API用于设置传感器的睡眠持续时间0x11
+ *				该API用于设置传感器的睡眠持续时间0x11
  *  \param unsigned char sleep_dur
  *                       5 -> 0.5MS
  *                       6 -> 1MS
@@ -1015,7 +1015,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_sleep_dur (unsigned char sleep_dur)
 /*******************************************************************************
  * Description: *//**\brief This API is used to get the sleep timer mode status
  *
- *				           ��API���ڻ�ȡ˯�߶�ʱ��ģʽ״̬ 0x11
+ *		      该API用于获取睡眠定时器模式状态 0x11
  *  \param  unsigned char *sleep_tmr : Address of sleep_tmr
  *                  sleep_tmr -> [0:1]
  *                  0 => enable EventDrivenSampling(EDT)
@@ -1036,7 +1036,7 @@ BMA2XX_RETURN_FUNCTION_TYPE  BMA2XX_get_sleeptmr_mode(unsigned char *sleep_tmr)
 /*******************************************************************************
  * Description: *//**\brief This API is used to set the sleep timer mode status
  * 
- *					   ��API��������˯�߶�ʱ��ģʽ״̬ 0x11
+ *			 该API用于设置睡眠定时器模式状态 0x11
  *  \param unsigned char sleep_tmr
  *                  sleep_tmr -> [0:1]
  *                  0 => enable EventDrivenSampling(EDT)
@@ -1065,7 +1065,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_sleeptmr_mode (unsigned char sleep_tmr)
 /*******************************************************************************
  * Description: *//**\brief This API is used to get shadow dis
  *
- *				      ���API���������Ӱ��dis��0x13��
+ *		   这个API被用来获得影子dis（0x13）
  *  \param unsigned char *shadow_dis : Address of shadow_dis
  *                    1 -> No MSB Locking
  *                    0 -> MSB is Locked
@@ -1084,7 +1084,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_shadow_dis (unsigned char *shadow_dis)
 /*******************************************************************************
  * Description: *//**\brief This API is used to set shadow dis
  *
- *					    ���API��������Ӱ��dis ��0x13��
+ *			这个API用于设置影子dis （0x13）
  *  \param unsigned char shadow_dis
  *                   1 -> No MSB Locking
  *                   0 -> MSB is Locked
@@ -1105,7 +1105,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_shadow_dis (unsigned char shadow_dis)
 /*******************************************************************************
  * Description: *//**\brief This API is used to get high bandwidth
  *
- *					   这个API被用来获得高带宽 0x13
+ *			这个API被用来获得高带宽0x13
  *  \param unsigned char *high_bw : Address of high_bw
  *                   1 -> Unfiltered High Bandwidth
  *                   0 -> Filtered Low Bandwidth
@@ -1124,7 +1124,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_high_bw (unsigned char *high_bw)
 /*******************************************************************************
  * Description: *//**\brief This API is used to set high bandwidth
  *
- *						这个API用于设置高带宽 0x13
+ *			该API用于设置高带宽 0x13
  *  \param unsigned char high_bw
  *                    1 -> Unfiltered High Bandwidth
  *                    0 -> Filtered Low Bandwidth
@@ -1145,7 +1145,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_high_bw (unsigned char high_bw)
 /****************************************************************************************
  * Description: *//**\brief This API is used to set interrupt enable bits of the sensor
  *
- *						    该API用于设置传感器的中断使能位
+ *				该API用于设置传感器的中断使能位
  *  \param unsigned char InterruptType , unsigned char value
  *                        0 -> Low_G_Interrupt
  *                        1 -> High_G_X_Interrupt
@@ -1232,7 +1232,7 @@ int BMA2XX_set_Int_Enable(unsigned char InterruptType , unsigned char value )
 /*********************************************************************************************
  * Description: *//**\brief This API is used to get the status of slow/no motion interrupt
  *
- *					       ��API���ڻ�ȡ��/�޶����жϵ�״̬(0x18)
+ *				 该API用于获取慢/无动作中断的状态(0x18)
  *  \param unsigned char channel,unsigned char *slo_data
  *           channel -->
  *           BMA2XX_SLO_NO_MOT_EN_X     ->     0
@@ -1273,7 +1273,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_slo_no_mot (unsigned char channel,unsigne
 /*********************************************************************************************
  * Description: *//**\brief This API is used to get the status of slow/no motion interrupt
  *
- *					        ��API���ڻ�ȡ��/�޶����жϵ�״̬(0x18)
+ *				该API用于获取慢/无动作中断的状态(0x18)
  *  \param unsigned char channel,unsigned char *slo_data
  *           channel -->
  *           BMA2XX_SLO_NO_MOT_EN_X     ->     0
@@ -1322,7 +1322,7 @@ BMA2XX_RETURN_FUNCTION_TYPE  BMA2XX_set_slo_no_mot (unsigned char channel,unsign
 /*********************************************************************************************
  * Description: *//**\brief This API is used to get the status of slow/no motion interrupt
  *
- *					��API���ڻ�ȡ��/�޶����жϵ�״̬(0x19 and 0x1B)
+ *				该API用于获取慢/无动作中断的状态(0x19 and 0x1B)
  *  \param unsigned char channel,unsigned char *int_slo_no_mot
  *                                 channel -->
  *                                 BMA2XX_INT1_SLO_NO_MOT     ->    0
@@ -1355,7 +1355,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_int_slo_no_mot (unsigned char channel,uns
 /*********************************************************************************************
  * Description: *//**\brief This API is used to set the status of slow/no motion interrupt
  *
- *				  ��API����������/�޶����жϵ�״̬(0x19 and 0x1B)
+ *				  该API用于设置慢/无动作中断的状态(0x19 and 0x1B)
  *  \param unsigned char channel,unsigned char int_slo_no_mot
  *                            channel -->
  *                            BMA2XX_INT1_SLO_NO_MOT     ->    0
@@ -1393,9 +1393,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_int_slo_no_mot (unsigned char channel,uns
 /*******************************************************************************
  * Description: *//**\brief This API is used to get the status of new data
  *  
- *							这个API用于获取新数据的状态			 
- *	
- *
+ *			该API用于获取新数据的状态		 
  *  \param unsigned char channel,unsigned char *int_newdata
  *                         channel -->
  *                         BMA2XX_INT1_NDATA     ->    0
@@ -1427,7 +1425,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_newdata (unsigned char channel,unsigned c
 /*******************************************************************************
  * Description: *//**\brief This API is used to set the status of new data
  *
- *							这个API用于设置新数据的状态
+ *			该API用于设置新数据的状态
  *  \param unsigned char channel,unsigned char int_newdata
  *                        channel -->
  *                        BMA2XX_INT1_NDATA     ->    0
@@ -1462,7 +1460,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_newdata (unsigned char channel,unsigned c
 /*******************************************************************************
  * Description: *//**\brief This API is used to get the source status data
  *
- *								��API���ڻ�ȡԴ״̬����    
+ *			此API用于获取源状态数据    
  *  \param unsigned char channel,unsigned char *int_source
  *                     Channel ->
  *                  BMA2XX_SRC_LOWG         0
@@ -1518,7 +1516,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_source (unsigned char channel,unsigned ch
 /*******************************************************************************
  * Description: *//**\brief  This API is used to set source status data
  *
- *							��API��������Դ״̬����(0x1E)
+ *			该API用于设置源状态数据(0x1E)
  *  \param unsigned char channel,unsigned char int_source
  *                  Channel ->
  *                  BMA2XX_SRC_LOWG         0
@@ -1578,7 +1576,7 @@ BMA2XX_RETURN_FUNCTION_TYPE  BMA2XX_set_source (unsigned char channel,unsigned c
 /*******************************************************************************
  * Description: *//**\brief This API is used to get Active Level status
  *
- *							��API���ڻ�ȡActive Level״̬
+ *			此API用于获取Active Level状态
  *  \param unsigned char channel,unsigned char *int_lvl
  *                  BMA2XX_INT1_LEVEL    ->    0
  *                  BMA2XX_INT2_LEVEL    ->    1
@@ -1613,7 +1611,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_int_lvl (unsigned char channel,unsigned c
 /*******************************************************************************
  * Description: *//**\brief This API is used to set Active Level status
  *
- *						��API�������û����״̬(0x20)
+ *		此API用于设置活动级别状态(0x20)
  *  \param (unsigned char channel,unsigned char int_lvl)
  *                  BMA2XX_INT1_LEVEL    ->    0
  *                  BMA2XX_INT2_LEVEL    ->    1
@@ -1648,7 +1646,7 @@ BMA2XX_RETURN_FUNCTION_TYPE  BMA2XX_set_int_lvl (unsigned char channel,unsigned 
 /*******************************************************************************
  * Description: *//**\brief This API is used to get the latch duration
  *
- *							��API���ڻ�ȡ����ʱ��(0x21)
+ *			该API用于获取锁存时间(0x21)
  *  \param unsigned char *latch_int : Address of latch_int
  *                  0 -> NON_LATCH
  *                  1 -> 250MS
@@ -1681,7 +1679,7 @@ BMA2XX_RETURN_FUNCTION_TYPE  BMA2XX_get_latch_int (unsigned char *latch_int)
 /*******************************************************************************
  * Description: *//**\brief This API is used to set the latch duration
  *
- *                     ��API������������ʱ��(0x21)
+ *                     该API用于设置锁存时间(0x21)
  *  \param unsigned char latch_int
  *                  0 -> NON_LATCH
  *                  1 -> 250MS
@@ -1808,7 +1806,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_latch_int (unsigned char latch_int)
 /*******************************************************************************
  * Description: *//**\brief This API is used to get duration
  *
- *						���API������ó���ʱ��
+ *			这个API用来获得持续时间
  *  \param unsigned char channel,unsigned char *dur
  *          BMA2XX_LOW_DURATION            0,1
  *          BMA2XX_HIGH_DURATION           1,2
@@ -1853,7 +1851,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_dur(unsigned char channel,unsigned char *
 /*******************************************************************************
  * Description: *//**\brief This API is used to set duration
  *
- *						���API�������ó���ʱ��
+ *			这个API用于设置持续时间
  *  \param unsigned char channel,unsigned char dur
  *          BMA2XX_LOW_DURATION            0,1
  *          BMA2XX_HIGH_DURATION           1,2
@@ -1900,7 +1898,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_dur (unsigned char channel,unsigned char 
 /*******************************************************************************
  * Description: *//**\brief This API is used to get threshold
  *
- *						���API�������ó���ʱ��
+ *			这个API用于设置持续时间
  *  \param unsigned char channel,unsigned char *thr
  *               BMA2XX_LOW_THRESHOLD            0,FE
  *               BMA2XX_HIGH_THRESHOLD           1,01
@@ -1945,7 +1943,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_thr(unsigned char channel,unsigned char *
 /*******************************************************************************
  * Description: *//**\brief This API is used to set threshold
  *
- *						���API����������ֵ
+ *			这个API用于设置阈值
  *  \param unsigned char channel,unsigned char thr
  *               BMA2XX_LOW_THRESHOLD            0,FE
  *               BMA2XX_HIGH_THRESHOLD           1,01
@@ -1990,7 +1988,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_thr (unsigned char channel,unsigned char 
 /*******************************************************************************
  * Description: *//**\brief This API is for to get Self Test Axis
  *                     
- *						���API���ڻ�ȡ�Բ���
+ *			这个API用于获取自测轴
  *  \param unsigned char *self_test_axis : Address of self_test_axis
  *                          Possible values [1:0] are 0 to 3.
  ******************************************************************************/
@@ -2008,7 +2006,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_self_test_axis (unsigned char *self_test_
 /*******************************************************************************
  * Description: *//**\brief This API is for to Set Self Test Axis
  *
- *							��API���������Լ���
+ *			该API用于设置自检轴
  *  \param unsigned char self_test_axis
  *
  *                      Possible values [1:0] are 0 to 3.
@@ -2035,7 +2033,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_self_test_axis (unsigned char self_test_a
 /*******************************************************************************
  * Description: *//**\brief This API is for to get Self Test sign
  *
- *				   ���API��Ϊ�˵õ����Ҳ��Եı�־(0x32)
+ *			这个API是为了得到自我测试的标志(0x32)
  *  \param unsigned char *self_test_sign : Address of self_test_sign
  *                              0 => '+'ve sign
  *                              1 => '-'ve sign
@@ -2054,7 +2052,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_self_test_sign (unsigned char *self_test_
 /*******************************************************************************
  * Description: *//**\brief This API is for to set Self Test sign
  *
- *				���API��Ϊ���������Ҳ��Եı�־(0x32)
+ *			这个API是为了设置自我测试的标志(0x32)
  *  \param  unsigned char self_test_sign
  *          0 => '+'ve sign
  *          1 => '-'ve sign
@@ -2081,7 +2079,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_self_test_sign (unsigned char self_test_s
 /*******************************************************************************
  * Description: *//**\brief This API is used to get the status slow compensation
  *
- *								这个API用来获得状态缓慢的补偿
+ *				该API用于获取状态缓慢的补偿
  *  \param unsigned char channel,unsigned char *slow_comp
  *                     BMA2XX_SLOW_COMP_X              0
  *                     BMA2XX_SLOW_COMP_Y              1
@@ -2123,7 +2121,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_slow_comp(unsigned char channel,unsigned 
 /*******************************************************************************
  * Description: *//**\brief This API is used to set the status slow compensation
  *
- *							这个API用来设置状态缓慢的补偿
+ *				该API用于设置状态缓慢补偿
  *  \param unsigned char channel,unsigned char slow_comp
  *          BMA2XX_SLOW_COMP_X              0
  *          BMA2XX_SLOW_COMP_Y              1
@@ -2169,8 +2167,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_slow_comp (unsigned char channel,unsigned
 /***************************************************************************************************
  * Description: *//**\brief This API is used to get the status of fast offset compensation(cal rdy)
  *
- *
- *								该API用于获取快速偏移补偿（cal rdy）的状态，
+ *					该API用于获取快速偏移补偿（校准）的状态，
  *
  *  \param unsigned char *rdy
  *                 Read Only Possible
@@ -2191,7 +2188,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_cal_rdy (unsigned char *rdy)
 /*******************************************************************************
  * Description: *//**\brief This API is used to set the status of cal rdy
  *
- *						这个API用于设置caldy的状态
+ *				这个API用于设置caldy的状态
  *  \param unsigned char rdy
  *
  *  \return communication results
@@ -2213,7 +2210,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_cal_rdy (unsigned char rdy)
 /*******************************************************************************
  * Description: *//**\brief This API is used to get the status of cal trig
  *
- *						这个API用于获取cal trig的状态
+ *			该API用于获取cal trig的状态
  *  \param unsigned char *cal_trig
  ******************************************************************************/
 BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_cal_trig (unsigned char *cal_trig)
@@ -2231,7 +2228,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_cal_trig (unsigned char *cal_trig)
 /*****************************************************************************************************
  * Description: *//**\brief This API is used to set the status of fast offset calculation(cal trig)
  *
- *						这个API用于设置快速偏移量计算的状态（cal trig）
+ *			该API用于设置快速偏移量计算的状态（cal trig）
  *  \param unsigned char cal_trig
  *                  Write only possible
  *****************************************************************************************************/
@@ -2251,7 +2248,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_cal_trig (unsigned char cal_trig)
 /*******************************************************************************
  * Description: *//**\brief This API is used to set the status of offset reset
  *
- *						该API用于设置偏移重置的状态
+ *			该API用于设置偏移重置的状态
  *  \param unsigned char offset_reset
  ******************************************************************************/
 BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_offset_reset (unsigned char offset_reset)
@@ -2269,7 +2266,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_offset_reset (unsigned char offset_reset)
 /*******************************************************************************
  * Description: *//**\brief This API is used to get the status of offset reset
  *
- *						该API用于获取偏移重置的状态
+ *				该API用于获取偏移重置的状态
  *  \param unsigned char channel,unsigned char *offset
  *                     Channel ->
  *               BMA2XX_CUT_OFF              ->    0
@@ -2319,7 +2316,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_offset_target(unsigned char channel,unsig
 /*******************************************************************************
  * Description: *//**\brief This API is used to set the status of offset reset
  *
- *									该API用于设置偏移重置的状态
+ *				该API用于设置偏移重置的状态
  *  \param unsigned char channel,unsigned char offset
  *               Channel ->
  *               BMA2XX_CUT_OFF              ->    0
@@ -2373,7 +2370,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_offset_target (unsigned char channel,unsi
 /*******************************************************************************
  * Description: *//**\brief This API is used to get the status of offset
  *
- *								这个API用于获取偏移量的状态
+ *				该API用于获取偏移量的状态
  *  \param unsigned char channel,unsigned char *offset
  *                         Channel ->
  *                   BMA2XX_X_AXIS     ->      0
@@ -2413,7 +2410,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_get_offset(unsigned char channel,unsigned cha
 /*******************************************************************************
  * Description: *//**\brief This API is used to set the status of offset
  *
- *						这个API用于设置偏移量的状态
+ *				该API用于设置偏移量的状态
  *  \param unsigned char channel,unsigned char offset
  *                   Channel ->
  *                   BMA2XX_X_AXIS     ->      0
