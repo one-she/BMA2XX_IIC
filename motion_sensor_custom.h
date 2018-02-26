@@ -99,8 +99,8 @@ extern const char gpio_ms_i2c_data_pin;
 #define E_EEPROM_BUSY           (char)-3
 #define BMA2XX_RETURN_FUNCTION_TYPE        int   /**< This refers BMA2XX return type as char */
 
-#define MS_CLK_PIN_GPIO_MODE		GPIO_ModeSetup(MS_SCL,0)
-#define	MS_DATA_PIN_GPIO_MODE		GPIO_ModeSetup(MS_SDA,0)
+#define MS_CLK_PIN_GPIO_MODE		        GPIO_ModeSetup(MS_SCL,0)
+#define	MS_DATA_PIN_GPIO_MODE		        GPIO_ModeSetup(MS_SDA,0)
 #define MS_I2C_CLK_OUTPUT			GPIO_InitIO(OUTPUT,MS_SCL)
 #define MS_I2C_DATA_OUTPUT			GPIO_InitIO(OUTPUT,MS_SDA)
 #define MS_I2C_DATA_INPUT		   	GPIO_InitIO(INPUT,MS_SDA)
@@ -394,7 +394,6 @@ extern const char gpio_ms_i2c_data_pin;
 #define BMA2XX_TAP_SIGN_S__LEN           1
 #define BMA2XX_TAP_SIGN_S__MSK           0x80
 #define BMA2XX_TAP_SIGN_S__REG           BMA2XX_STATUS_TAP_SLOPE_REG
-
 
 /***********************************0X0C**********************************/
 #define BMA2XX_HIGHG_FIRST_X__POS        0
@@ -1319,15 +1318,11 @@ typedef struct {
 } SPARAMETERS;
 
 
-
 kal_uint8 BMA2XX_ReadID(void);
 void BMA2XX_init(void);
 void BMA2XX_ReadXYZ(kal_uint16 *X, kal_uint16 *Y, kal_uint16 *Z);
 kal_uint8  Motion_detection_deal(void);
 extern MotionSensor_customize_function_struct *ms_GetFunc(void);
-
-
-
 
 #endif	//_MOTION_SENSOR_CUSTOM_H
 
