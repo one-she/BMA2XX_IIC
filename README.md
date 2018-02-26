@@ -10,7 +10,7 @@ File       |   Version   |   Date
 bma2xx.c   |     1.0     |   26 Feb 2018
 bma2xx.h   |     1.0     |   26 Feb 2018
 
-# Integration details
+## Integration details
 * Integration bma2xx.c, bma2xx.h file in to the pooject.
 * Include the bma2xx.h file in your code like below.
 ``` c
