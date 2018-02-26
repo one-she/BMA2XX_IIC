@@ -533,7 +533,7 @@ kal_bool BMA2XX_WriteBytes_Mul(kal_uint8 RegAddr, kal_uint8 *Data, kal_uint16 Le
  * Description: *//**\brief This API Reads tap slope status register byte
  *                          from location 0Bh
  *
- *					   璇PI浠庝綅缃�0Bh璇诲彇鎶藉ご鏂滅巼鐘舵�佸瘎瀛樺櫒瀛楄妭
+ *			该API从位置0Bh读取斜率状态寄存器字节
  *  \param unsigned char * status_tap : Address of status_tap register
  ******************************************************************************/
 int BMA2XX_get_int_tap_status(unsigned char * status_tap)
@@ -549,7 +549,7 @@ int BMA2XX_get_int_tap_status(unsigned char * status_tap)
  * Description: *//**\brief This API Reads orient status register byte
  *                          from location 0Ch
  *
- *					  璇PI浠庝綅缃�0Ch璇诲彇瀹氫綅鐘舵�佸瘎瀛樺櫒瀛楄妭
+ *				该API从位置0Ch读取定位状态寄存器字节
  *  \param unsigned char *status_orient : Address of status_orient register
  ******************************************************************************/
 int BMA2XX_get_int_orient_status(unsigned char *status_orient)
@@ -565,7 +565,7 @@ int BMA2XX_get_int_orient_status(unsigned char *status_orient)
  * Description: *//**\brief This API Reads interrupt status register byte
  *                          from location 09h
  *
- *					璇PI浠庝綅缃�09h璇诲彇涓柇鐘舵�佸瘎瀛樺櫒瀛楄妭
+ *			该API从位置09h读取中断状态寄存器字节
  ******************************************************************************/
 int BMA2XX_get_interrupt_status(unsigned char * status)
 {
@@ -1898,7 +1898,7 @@ BMA2XX_RETURN_FUNCTION_TYPE BMA2XX_set_dur (unsigned char channel,unsigned char 
 /*******************************************************************************
  * Description: *//**\brief This API is used to get threshold
  *
- *			这个API用于设置持续时间
+ *			此API用于获取阈值
  *  \param unsigned char channel,unsigned char *thr
  *               BMA2XX_LOW_THRESHOLD            0,FE
  *               BMA2XX_HIGH_THRESHOLD           1,01
